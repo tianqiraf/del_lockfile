@@ -7,7 +7,7 @@ function getdir(){
         then 
             getdir $dir_or_file
         else
-			if [[ ${dir_or_file##*/} =~ "sch.oa.cdslck" ]] || [[ ${dir_or_file##*/} = "CDS.log.cdslck" ]];
+			if [[ ${dir_or_file##*/} =~ ".oa.cdslck" ]] || [[ ${dir_or_file##*/} = "CDS.log.cdslck" ]];
 			then
 				lock_files[${#lock_files[*]}]=$dir_or_file
 			fi
